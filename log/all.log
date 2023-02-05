@@ -1,0 +1,286 @@
+2022-12-14 19:49:00,003 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:247] - INFO: 本地文件夹已清空
+2022-12-14 19:49:00,011 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:252] - INFO: lib文件夹已清空
+2022-12-14 19:57:44,799 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:247] - INFO: 本地文件夹已清空
+2022-12-14 19:57:44,803 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:252] - INFO: lib文件夹已清空
+2022-12-14 19:57:44,938 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202101', folder=True), Child(uri='/bsamlV202201', folder=True)]
+2022-12-14 19:57:44,938 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202101', 'bsamlV202201']
+2022-12-14 19:57:44,939 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:180] - INFO: 获取最新路径：bsamlV202201
+2022-12-14 19:57:44,969 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202201.00.000', folder=True), Child(uri='/bsamlV202201.01.000', folder=True), Child(uri='/bsamlV202201.02.000', folder=True), Child(uri='/bsamlV202201.03.000', folder=True), Child(uri='/bsamlV202201.04.000', folder=True), Child(uri='/bsamlV202201.05.000', folder=True), Child(uri='/bsamlV202201.06.000', folder=True), Child(uri='/bsamlV202201.07.000', folder=True), Child(uri='/bsamlV202201.08.000', folder=True)]
+2022-12-14 19:57:44,969 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202201.00.000', 'bsamlV202201.01.000', 'bsamlV202201.02.000', 'bsamlV202201.03.000', 'bsamlV202201.04.000', 'bsamlV202201.05.000', 'bsamlV202201.06.000', 'bsamlV202201.07.000', 'bsamlV202201.08.000']
+2022-12-14 19:57:44,969 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:185] - INFO: 获取最新版本：bsamlV202201.08.000
+2022-12-14 19:57:44,969 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:189] - INFO: V202201.08.000
+2022-12-14 19:57:44,970 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'ics4.0-generic-test-local', 'remove_dir': 'FERM2.0/os/FERM2.0%s/FERM2.0%s/script', 'name': '', 'start': 'FERM20', 'end': 'zip'}
+2022-12-14 19:57:44,970 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 19:57:44,970 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: FERM2.0/os/FERM2.0%s/FERM2.0%s/script
+2022-12-14 19:57:44,970 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 19:57:44,970 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0%s/SCM4.0%s/script', 'name': '', 'start': 'SCM40', 'end': 'zip'}
+2022-12-14 19:57:44,970 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 19:57:44,970 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: SCM4.0/os/SCM4.0%s/SCM4.0%s/script
+2022-12-14 19:57:44,970 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 19:57:44,970 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'service', 'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0%s/SCM4.0%s/WEB-cover', 'name': 'SCM4.0-WorkflowServer-%s.zip', 'start': 'SCM4.0-WorkflowServer', 'end': 'zip'}
+2022-12-14 19:57:44,970 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 19:57:44,970 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: SCM4.0/os/SCM4.0%s/SCM4.0%s/WEB-cover
+2022-12-14 19:57:44,970 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 19:57:44,970 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0V202201/SCM4.0V202201.08.0/WEB-cover', 'name': 'SCM4.0-WorkflowServer-%s.zip', 'start': 'SCM4.0-WorkflowServer', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 19:57:45,086 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：[]
+2022-12-14 19:57:45,086 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:41] - INFO: 仓库:scm4.0-generic-test-local不存在
+2022-12-14 19:57:45,086 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'service', 'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0%s/SCM4.0%s/WEB-cover', 'name': 'SCM4.0-AML-%s.zip', 'start': 'SCM4.0-AML', 'end': 'zip'}
+2022-12-14 19:57:45,086 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 19:57:45,086 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: SCM4.0/os/SCM4.0%s/SCM4.0%s/WEB-cover
+2022-12-14 19:57:45,087 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 19:57:45,087 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0V202201/SCM4.0V202201.08.0/WEB-cover', 'name': 'SCM4.0-AML-%s.zip', 'start': 'SCM4.0-AML', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 19:57:45,211 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：[]
+2022-12-14 19:57:45,211 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:41] - INFO: 仓库:scm4.0-generic-test-local不存在
+2022-12-14 19:57:45,211 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'service', 'download_path': 'F:\\dowloadftp', 'repo': 'ics4.0-generic-test-local', 'remove_dir': 'FERM2.0/os/FERM2.0%s/FERM2.0%s/WEB-cover', 'name': 'FERM2.0-RMM-%s.zip', 'start': 'FERM2.0-RMM', 'end': 'zip'}
+2022-12-14 19:57:45,211 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 19:57:45,211 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: FERM2.0/os/FERM2.0%s/FERM2.0%s/WEB-cover
+2022-12-14 19:57:45,211 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 19:57:45,211 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'ics4.0-generic-test-local', 'remove_dir': 'FERM2.0/os/FERM2.0V202201/FERM2.0V202201.08.0/WEB-cover', 'name': 'FERM2.0-RMM-%s.zip', 'start': 'FERM2.0-RMM', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 19:57:45,334 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：[]
+2022-12-14 19:57:45,334 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:41] - INFO: 仓库:ics4.0-generic-test-local不存在
+2022-12-14 19:57:45,334 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'service', 'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0%s/SCM4.0%s/WEB-cover', 'name': 'SCM4.0-RMM-HG-%s.zip', 'start': 'SCM4.0-RMM-HG', 'end': 'zip'}
+2022-12-14 19:57:45,334 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 19:57:45,334 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: SCM4.0/os/SCM4.0%s/SCM4.0%s/WEB-cover
+2022-12-14 19:57:45,334 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 19:57:45,335 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0V202201/SCM4.0V202201.08.0/WEB-cover', 'name': 'SCM4.0-RMM-HG-%s.zip', 'start': 'SCM4.0-RMM-HG', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 19:57:45,425 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：[]
+2022-12-14 19:57:45,425 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:41] - INFO: 仓库:scm4.0-generic-test-local不存在
+2022-12-14 19:57:45,425 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'service', 'download_path': 'F:\\dowloadftp', 'repo': 'ics4.0-generic-test-local', 'remove_dir': 'FERM2.0/os/FERM2.0%s/FERM2.0%s/WEB-cover', 'name': 'FERM2.0-dispatch2-%s.zip', 'start': 'FERM2.0-dispatch2', 'end': 'zip'}
+2022-12-14 19:57:45,425 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 19:57:45,425 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: FERM2.0/os/FERM2.0%s/FERM2.0%s/WEB-cover
+2022-12-14 19:57:45,425 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 19:57:45,426 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'ics4.0-generic-test-local', 'remove_dir': 'FERM2.0/os/FERM2.0V202201/FERM2.0V202201.08.0/WEB-cover', 'name': 'FERM2.0-dispatch2-%s.zip', 'start': 'FERM2.0-dispatch2', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 19:57:45,500 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：[]
+2022-12-14 19:57:45,501 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:41] - INFO: 仓库:ics4.0-generic-test-local不存在
+2022-12-14 20:08:52,884 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:247] - INFO: 本地文件夹已清空
+2022-12-14 20:08:52,888 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:252] - INFO: lib文件夹已清空
+2022-12-14 20:08:52,922 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202101', folder=True), Child(uri='/bsamlV202201', folder=True)]
+2022-12-14 20:08:52,922 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202101', 'bsamlV202201']
+2022-12-14 20:08:52,922 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:180] - INFO: 获取最新路径：bsamlV202201
+2022-12-14 20:08:52,935 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202201.00.000', folder=True), Child(uri='/bsamlV202201.01.000', folder=True), Child(uri='/bsamlV202201.02.000', folder=True), Child(uri='/bsamlV202201.03.000', folder=True), Child(uri='/bsamlV202201.04.000', folder=True), Child(uri='/bsamlV202201.05.000', folder=True), Child(uri='/bsamlV202201.06.000', folder=True), Child(uri='/bsamlV202201.07.000', folder=True), Child(uri='/bsamlV202201.08.000', folder=True)]
+2022-12-14 20:08:52,935 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202201.00.000', 'bsamlV202201.01.000', 'bsamlV202201.02.000', 'bsamlV202201.03.000', 'bsamlV202201.04.000', 'bsamlV202201.05.000', 'bsamlV202201.06.000', 'bsamlV202201.07.000', 'bsamlV202201.08.000']
+2022-12-14 20:08:52,935 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:185] - INFO: 获取最新版本：bsamlV202201.08.000
+2022-12-14 20:08:52,935 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:189] - INFO: V202201.08.000
+2022-12-14 20:08:52,936 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'FERM2.0/os/FERM2.0%s/FERM2.0%s/script', 'name': '', 'start': 'DCT4.0', 'end': 'zip'}
+2022-12-14 20:08:52,936 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:08:52,937 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: FERM2.0/os/FERM2.0%s/FERM2.0%s/script
+2022-12-14 20:08:52,937 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:08:52,937 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0%s/SCM4.0%s/script', 'name': '', 'start': 'SCM40', 'end': 'zip'}
+2022-12-14 20:08:52,937 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:08:52,937 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: SCM4.0/os/SCM4.0%s/SCM4.0%s/script
+2022-12-14 20:08:52,937 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:08:52,937 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'service', 'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0%s/SCM4.0%s/WEB-cover', 'name': 'SCM4.0-WorkflowServer-%s.zip', 'start': 'SCM4.0-WorkflowServer', 'end': 'zip'}
+2022-12-14 20:08:52,937 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:08:52,937 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: SCM4.0/os/SCM4.0%s/SCM4.0%s/WEB-cover
+2022-12-14 20:08:52,937 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:08:52,937 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0V202201/SCM4.0V202201.08.0/WEB-cover', 'name': 'SCM4.0-WorkflowServer-%s.zip', 'start': 'SCM4.0-WorkflowServer', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:08:53,016 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：[]
+2022-12-14 20:08:53,016 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:41] - INFO: 仓库:scm4.0-generic-test-local不存在
+2022-12-14 20:08:53,016 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'service', 'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0%s/SCM4.0%s/WEB-cover', 'name': 'SCM4.0-AML-%s.zip', 'start': 'SCM4.0-AML', 'end': 'zip'}
+2022-12-14 20:08:53,016 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:08:53,016 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: SCM4.0/os/SCM4.0%s/SCM4.0%s/WEB-cover
+2022-12-14 20:08:53,016 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:08:53,016 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0V202201/SCM4.0V202201.08.0/WEB-cover', 'name': 'SCM4.0-AML-%s.zip', 'start': 'SCM4.0-AML', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:08:53,081 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：[]
+2022-12-14 20:08:53,081 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:41] - INFO: 仓库:scm4.0-generic-test-local不存在
+2022-12-14 20:08:53,081 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'service', 'download_path': 'F:\\dowloadftp', 'repo': 'ics4.0-generic-test-local', 'remove_dir': 'FERM2.0/os/FERM2.0%s/FERM2.0%s/WEB-cover', 'name': 'FERM2.0-RMM-%s.zip', 'start': 'FERM2.0-RMM', 'end': 'zip'}
+2022-12-14 20:08:53,081 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:08:53,081 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: FERM2.0/os/FERM2.0%s/FERM2.0%s/WEB-cover
+2022-12-14 20:08:53,081 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:08:53,081 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'ics4.0-generic-test-local', 'remove_dir': 'FERM2.0/os/FERM2.0V202201/FERM2.0V202201.08.0/WEB-cover', 'name': 'FERM2.0-RMM-%s.zip', 'start': 'FERM2.0-RMM', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:08:53,147 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：[]
+2022-12-14 20:08:53,148 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:41] - INFO: 仓库:ics4.0-generic-test-local不存在
+2022-12-14 20:08:53,148 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'service', 'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0%s/SCM4.0%s/WEB-cover', 'name': 'SCM4.0-RMM-HG-%s.zip', 'start': 'SCM4.0-RMM-HG', 'end': 'zip'}
+2022-12-14 20:08:53,148 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:08:53,148 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: SCM4.0/os/SCM4.0%s/SCM4.0%s/WEB-cover
+2022-12-14 20:08:53,148 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:08:53,148 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'scm4.0-generic-test-local', 'remove_dir': 'SCM4.0/os/SCM4.0V202201/SCM4.0V202201.08.0/WEB-cover', 'name': 'SCM4.0-RMM-HG-%s.zip', 'start': 'SCM4.0-RMM-HG', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:08:53,212 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：[]
+2022-12-14 20:08:53,212 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:41] - INFO: 仓库:scm4.0-generic-test-local不存在
+2022-12-14 20:08:53,212 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'service', 'download_path': 'F:\\dowloadftp', 'repo': 'ics4.0-generic-test-local', 'remove_dir': 'FERM2.0/os/FERM2.0%s/FERM2.0%s/WEB-cover', 'name': 'FERM2.0-dispatch2-%s.zip', 'start': 'FERM2.0-dispatch2', 'end': 'zip'}
+2022-12-14 20:08:53,212 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:08:53,212 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: FERM2.0/os/FERM2.0%s/FERM2.0%s/WEB-cover
+2022-12-14 20:08:53,212 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:08:53,212 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'ics4.0-generic-test-local', 'remove_dir': 'FERM2.0/os/FERM2.0V202201/FERM2.0V202201.08.0/WEB-cover', 'name': 'FERM2.0-dispatch2-%s.zip', 'start': 'FERM2.0-dispatch2', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:08:53,279 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：[]
+2022-12-14 20:08:53,280 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:41] - INFO: 仓库:ics4.0-generic-test-local不存在
+2022-12-14 20:09:58,320 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:247] - INFO: 本地文件夹已清空
+2022-12-14 20:09:58,325 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:252] - INFO: lib文件夹已清空
+2022-12-14 20:09:58,352 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202101', folder=True), Child(uri='/bsamlV202201', folder=True)]
+2022-12-14 20:09:58,353 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202101', 'bsamlV202201']
+2022-12-14 20:09:58,353 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:180] - INFO: 获取最新路径：bsamlV202201
+2022-12-14 20:09:58,363 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202201.00.000', folder=True), Child(uri='/bsamlV202201.01.000', folder=True), Child(uri='/bsamlV202201.02.000', folder=True), Child(uri='/bsamlV202201.03.000', folder=True), Child(uri='/bsamlV202201.04.000', folder=True), Child(uri='/bsamlV202201.05.000', folder=True), Child(uri='/bsamlV202201.06.000', folder=True), Child(uri='/bsamlV202201.07.000', folder=True), Child(uri='/bsamlV202201.08.000', folder=True)]
+2022-12-14 20:09:58,363 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202201.00.000', 'bsamlV202201.01.000', 'bsamlV202201.02.000', 'bsamlV202201.03.000', 'bsamlV202201.04.000', 'bsamlV202201.05.000', 'bsamlV202201.06.000', 'bsamlV202201.07.000', 'bsamlV202201.08.000']
+2022-12-14 20:09:58,363 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:185] - INFO: 获取最新版本：bsamlV202201.08.000
+2022-12-14 20:09:58,363 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:189] - INFO: V202201.08.000
+2022-12-14 20:09:58,363 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'FERM2.0/os/FERM2.0%s/FERM2.0%s/script', 'name': '', 'start': 'DCT4.0', 'end': 'zip'}
+2022-12-14 20:09:58,363 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:09:58,364 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: FERM2.0/os/FERM2.0%s/FERM2.0%s/script
+2022-12-14 20:09:58,364 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:09:58,364 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:430] - INFO: web升级开始
+2022-12-14 20:09:58,364 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:443] - INFO: web升级结束
+2022-12-14 20:09:58,364 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:523] - INFO: 下载时间0.0分钟
+2022-12-14 20:09:58,364 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:524] - INFO: 解压时间0.0分钟
+2022-12-14 20:09:58,364 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:525] - INFO: 覆盖时间0.0分钟
+2022-12-14 20:09:58,364 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:526] - INFO: web升级完毕
+2022-12-14 20:09:58,374 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202101', folder=True), Child(uri='/bsamlV202201', folder=True)]
+2022-12-14 20:09:58,374 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202101', 'bsamlV202201']
+2022-12-14 20:09:58,374 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:180] - INFO: 获取最新路径：bsamlV202201
+2022-12-14 20:09:58,383 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202201.00.000', folder=True), Child(uri='/bsamlV202201.01.000', folder=True), Child(uri='/bsamlV202201.02.000', folder=True), Child(uri='/bsamlV202201.03.000', folder=True), Child(uri='/bsamlV202201.04.000', folder=True), Child(uri='/bsamlV202201.05.000', folder=True), Child(uri='/bsamlV202201.06.000', folder=True), Child(uri='/bsamlV202201.07.000', folder=True), Child(uri='/bsamlV202201.08.000', folder=True)]
+2022-12-14 20:09:58,383 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202201.00.000', 'bsamlV202201.01.000', 'bsamlV202201.02.000', 'bsamlV202201.03.000', 'bsamlV202201.04.000', 'bsamlV202201.05.000', 'bsamlV202201.06.000', 'bsamlV202201.07.000', 'bsamlV202201.08.000']
+2022-12-14 20:09:58,384 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:185] - INFO: 获取最新版本：bsamlV202201.08.000
+2022-12-14 20:09:58,384 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:189] - INFO: V202201.08.000
+2022-12-14 20:09:58,384 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'FERM2.0/os/FERM2.0V202201/FERM2.0V202201.08.0/script', 'name': '', 'start': 'DCT4.0', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:09:58,384 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:09:58,384 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: FERM2.0/os/FERM2.0V202201/FERM2.0V202201.08.0/script
+2022-12-14 20:09:58,384 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:09:58,384 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'FERM2.0/os/FERM2.0V202201/FERM2.0V202201.08.0/script', 'name': '', 'start': 'DCT4.0', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:09:58,469 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：['aml4.1-generic-release-local', 'aml4.1-generic-test-local']
+2022-12-14 20:09:58,469 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:43] - INFO: 仓库:aml4.1-generic-test-local存在
+2022-12-14 20:09:58,469 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:44] - INFO: aml4.1-generic-test-local/FERM2.0/os/FERM2.0V202201/FERM2.0V202201.08.0/script/
+2022-12-14 20:21:41,859 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:247] - INFO: 本地文件夹已清空
+2022-12-14 20:21:41,863 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:252] - INFO: lib文件夹已清空
+2022-12-14 20:21:41,897 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202101', folder=True), Child(uri='/bsamlV202201', folder=True)]
+2022-12-14 20:21:41,897 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202101', 'bsamlV202201']
+2022-12-14 20:21:41,897 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:180] - INFO: 获取最新路径：bsamlV202201
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202201.00.000', folder=True), Child(uri='/bsamlV202201.01.000', folder=True), Child(uri='/bsamlV202201.02.000', folder=True), Child(uri='/bsamlV202201.03.000', folder=True), Child(uri='/bsamlV202201.04.000', folder=True), Child(uri='/bsamlV202201.05.000', folder=True), Child(uri='/bsamlV202201.06.000', folder=True), Child(uri='/bsamlV202201.07.000', folder=True), Child(uri='/bsamlV202201.08.000', folder=True)]
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202201.00.000', 'bsamlV202201.01.000', 'bsamlV202201.02.000', 'bsamlV202201.03.000', 'bsamlV202201.04.000', 'bsamlV202201.05.000', 'bsamlV202201.06.000', 'bsamlV202201.07.000', 'bsamlV202201.08.000']
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:185] - INFO: 获取最新版本：bsamlV202201.08.000
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:189] - INFO: V202201.08.000
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'bsaml/os/bsamlV202201%s/bsamlV202201%s', 'name': '', 'start': 'DCT4.0', 'end': 'zip'}
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: bsaml/os/bsamlV202201%s/bsamlV202201%s
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:430] - INFO: web升级开始
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:443] - INFO: web升级结束
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:523] - INFO: 下载时间0.0分钟
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:524] - INFO: 解压时间0.0分钟
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:525] - INFO: 覆盖时间0.0分钟
+2022-12-14 20:21:41,907 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:526] - INFO: web升级完毕
+2022-12-14 20:21:41,919 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202101', folder=True), Child(uri='/bsamlV202201', folder=True)]
+2022-12-14 20:21:41,919 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202101', 'bsamlV202201']
+2022-12-14 20:21:41,919 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:180] - INFO: 获取最新路径：bsamlV202201
+2022-12-14 20:21:41,929 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202201.00.000', folder=True), Child(uri='/bsamlV202201.01.000', folder=True), Child(uri='/bsamlV202201.02.000', folder=True), Child(uri='/bsamlV202201.03.000', folder=True), Child(uri='/bsamlV202201.04.000', folder=True), Child(uri='/bsamlV202201.05.000', folder=True), Child(uri='/bsamlV202201.06.000', folder=True), Child(uri='/bsamlV202201.07.000', folder=True), Child(uri='/bsamlV202201.08.000', folder=True)]
+2022-12-14 20:21:41,929 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202201.00.000', 'bsamlV202201.01.000', 'bsamlV202201.02.000', 'bsamlV202201.03.000', 'bsamlV202201.04.000', 'bsamlV202201.05.000', 'bsamlV202201.06.000', 'bsamlV202201.07.000', 'bsamlV202201.08.000']
+2022-12-14 20:21:41,929 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:185] - INFO: 获取最新版本：bsamlV202201.08.000
+2022-12-14 20:21:41,929 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:189] - INFO: V202201.08.000
+2022-12-14 20:21:41,929 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'bsaml/os/bsamlV202201V202201/bsamlV202201V202201.08.0', 'name': '', 'start': 'DCT4.0', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:21:41,929 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:21:41,930 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: bsaml/os/bsamlV202201V202201/bsamlV202201V202201.08.0
+2022-12-14 20:21:41,930 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:21:41,930 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'bsaml/os/bsamlV202201V202201/bsamlV202201V202201.08.0', 'name': '', 'start': 'DCT4.0', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:21:42,005 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：['aml4.1-generic-release-local', 'aml4.1-generic-test-local']
+2022-12-14 20:21:42,005 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:43] - INFO: 仓库:aml4.1-generic-test-local存在
+2022-12-14 20:21:42,005 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:44] - INFO: aml4.1-generic-test-local/bsaml/os/bsamlV202201V202201/bsamlV202201V202201.08.0/
+2022-12-14 20:23:07,902 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:247] - INFO: 本地文件夹已清空
+2022-12-14 20:23:07,905 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:252] - INFO: lib文件夹已清空
+2022-12-14 20:23:07,928 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202101', folder=True), Child(uri='/bsamlV202201', folder=True)]
+2022-12-14 20:23:07,928 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202101', 'bsamlV202201']
+2022-12-14 20:23:07,928 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:180] - INFO: 获取最新路径：bsamlV202201
+2022-12-14 20:23:07,939 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202201.00.000', folder=True), Child(uri='/bsamlV202201.01.000', folder=True), Child(uri='/bsamlV202201.02.000', folder=True), Child(uri='/bsamlV202201.03.000', folder=True), Child(uri='/bsamlV202201.04.000', folder=True), Child(uri='/bsamlV202201.05.000', folder=True), Child(uri='/bsamlV202201.06.000', folder=True), Child(uri='/bsamlV202201.07.000', folder=True), Child(uri='/bsamlV202201.08.000', folder=True)]
+2022-12-14 20:23:07,939 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202201.00.000', 'bsamlV202201.01.000', 'bsamlV202201.02.000', 'bsamlV202201.03.000', 'bsamlV202201.04.000', 'bsamlV202201.05.000', 'bsamlV202201.06.000', 'bsamlV202201.07.000', 'bsamlV202201.08.000']
+2022-12-14 20:23:07,939 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:185] - INFO: 获取最新版本：bsamlV202201.08.000
+2022-12-14 20:23:07,940 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:189] - INFO: V202201.08.000
+2022-12-14 20:23:07,940 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'bsaml/os/bsaml%s/bsaml%s', 'name': '', 'start': 'DCT4.0', 'end': 'zip'}
+2022-12-14 20:23:07,940 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:23:07,940 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: bsaml/os/bsaml%s/bsaml%s
+2022-12-14 20:23:07,940 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:23:07,940 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:430] - INFO: web升级开始
+2022-12-14 20:23:07,940 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:443] - INFO: web升级结束
+2022-12-14 20:23:07,940 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:523] - INFO: 下载时间0.0分钟
+2022-12-14 20:23:07,940 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:524] - INFO: 解压时间0.0分钟
+2022-12-14 20:23:07,940 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:525] - INFO: 覆盖时间0.0分钟
+2022-12-14 20:23:07,940 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:526] - INFO: web升级完毕
+2022-12-14 20:23:07,951 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202101', folder=True), Child(uri='/bsamlV202201', folder=True)]
+2022-12-14 20:23:07,951 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202101', 'bsamlV202201']
+2022-12-14 20:23:07,951 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:180] - INFO: 获取最新路径：bsamlV202201
+2022-12-14 20:23:07,973 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202201.00.000', folder=True), Child(uri='/bsamlV202201.01.000', folder=True), Child(uri='/bsamlV202201.02.000', folder=True), Child(uri='/bsamlV202201.03.000', folder=True), Child(uri='/bsamlV202201.04.000', folder=True), Child(uri='/bsamlV202201.05.000', folder=True), Child(uri='/bsamlV202201.06.000', folder=True), Child(uri='/bsamlV202201.07.000', folder=True), Child(uri='/bsamlV202201.08.000', folder=True)]
+2022-12-14 20:23:07,973 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202201.00.000', 'bsamlV202201.01.000', 'bsamlV202201.02.000', 'bsamlV202201.03.000', 'bsamlV202201.04.000', 'bsamlV202201.05.000', 'bsamlV202201.06.000', 'bsamlV202201.07.000', 'bsamlV202201.08.000']
+2022-12-14 20:23:07,973 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:185] - INFO: 获取最新版本：bsamlV202201.08.000
+2022-12-14 20:23:07,973 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:189] - INFO: V202201.08.000
+2022-12-14 20:23:07,973 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'bsaml/os/bsamlV202201/bsamlV202201.08.0', 'name': '', 'start': 'DCT4.0', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:23:07,973 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:23:07,973 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: bsaml/os/bsamlV202201/bsamlV202201.08.0
+2022-12-14 20:23:07,973 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:23:07,973 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'bsaml/os/bsamlV202201/bsamlV202201.08.0', 'name': '', 'start': 'DCT4.0', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:23:08,052 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：['aml4.1-generic-release-local', 'aml4.1-generic-test-local']
+2022-12-14 20:23:08,052 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:43] - INFO: 仓库:aml4.1-generic-test-local存在
+2022-12-14 20:23:08,052 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:44] - INFO: aml4.1-generic-test-local/bsaml/os/bsamlV202201/bsamlV202201.08.0/
+2022-12-14 20:37:31,832 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:247] - INFO: 本地文件夹已清空
+2022-12-14 20:37:31,836 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:252] - INFO: lib文件夹已清空
+2022-12-14 20:37:31,873 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202101', folder=True), Child(uri='/bsamlV202201', folder=True)]
+2022-12-14 20:37:31,873 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202101', 'bsamlV202201']
+2022-12-14 20:37:31,873 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:180] - INFO: 获取最新路径：bsamlV202201
+2022-12-14 20:37:31,903 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202201.00.000', folder=True), Child(uri='/bsamlV202201.01.000', folder=True), Child(uri='/bsamlV202201.02.000', folder=True), Child(uri='/bsamlV202201.03.000', folder=True), Child(uri='/bsamlV202201.04.000', folder=True), Child(uri='/bsamlV202201.05.000', folder=True), Child(uri='/bsamlV202201.06.000', folder=True), Child(uri='/bsamlV202201.07.000', folder=True), Child(uri='/bsamlV202201.08.000', folder=True)]
+2022-12-14 20:37:31,903 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202201.00.000', 'bsamlV202201.01.000', 'bsamlV202201.02.000', 'bsamlV202201.03.000', 'bsamlV202201.04.000', 'bsamlV202201.05.000', 'bsamlV202201.06.000', 'bsamlV202201.07.000', 'bsamlV202201.08.000']
+2022-12-14 20:37:31,903 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:185] - INFO: 获取最新版本：bsamlV202201.08.000
+2022-12-14 20:37:31,903 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:189] - INFO: V202201.08.000
+2022-12-14 20:37:31,903 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'bsaml/os/bsaml%s/bsaml%s', 'name': '', 'start': 'DCT4.0-', 'end': 'zip'}
+2022-12-14 20:37:31,903 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:37:31,903 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: bsaml/os/bsaml%s/bsaml%s
+2022-12-14 20:37:31,903 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:37:31,903 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:430] - INFO: web升级开始
+2022-12-14 20:37:31,903 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:443] - INFO: web升级结束
+2022-12-14 20:37:31,903 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:523] - INFO: 下载时间0.0分钟
+2022-12-14 20:37:31,904 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:524] - INFO: 解压时间0.0分钟
+2022-12-14 20:37:31,904 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:525] - INFO: 覆盖时间0.0分钟
+2022-12-14 20:37:31,904 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:526] - INFO: web升级完毕
+2022-12-14 20:37:31,914 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202101', folder=True), Child(uri='/bsamlV202201', folder=True)]
+2022-12-14 20:37:31,914 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202101', 'bsamlV202201']
+2022-12-14 20:37:31,914 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:180] - INFO: 获取最新路径：bsamlV202201
+2022-12-14 20:37:31,924 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202201.00.000', folder=True), Child(uri='/bsamlV202201.01.000', folder=True), Child(uri='/bsamlV202201.02.000', folder=True), Child(uri='/bsamlV202201.03.000', folder=True), Child(uri='/bsamlV202201.04.000', folder=True), Child(uri='/bsamlV202201.05.000', folder=True), Child(uri='/bsamlV202201.06.000', folder=True), Child(uri='/bsamlV202201.07.000', folder=True), Child(uri='/bsamlV202201.08.000', folder=True)]
+2022-12-14 20:37:31,924 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202201.00.000', 'bsamlV202201.01.000', 'bsamlV202201.02.000', 'bsamlV202201.03.000', 'bsamlV202201.04.000', 'bsamlV202201.05.000', 'bsamlV202201.06.000', 'bsamlV202201.07.000', 'bsamlV202201.08.000']
+2022-12-14 20:37:31,924 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:185] - INFO: 获取最新版本：bsamlV202201.08.000
+2022-12-14 20:37:31,925 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:189] - INFO: V202201.08.000
+2022-12-14 20:37:31,925 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'bsaml/os/bsamlV202201/bsamlV202201.08.0', 'name': '', 'start': 'DCT4.0-', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:37:31,925 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.0
+2022-12-14 20:37:31,925 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: bsaml/os/bsamlV202201/bsamlV202201.08.0
+2022-12-14 20:37:31,925 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:37:31,925 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'bsaml/os/bsamlV202201/bsamlV202201.08.0', 'name': '', 'start': 'DCT4.0-', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:37:32,004 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：['aml4.1-generic-release-local', 'aml4.1-generic-test-local']
+2022-12-14 20:37:32,004 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:43] - INFO: 仓库:aml4.1-generic-test-local存在
+2022-12-14 20:37:32,005 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:44] - INFO: aml4.1-generic-test-local/bsaml/os/bsamlV202201/bsamlV202201.08.0/
+2022-12-14 20:51:20,420 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:247] - INFO: 本地文件夹已清空
+2022-12-14 20:51:20,424 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:252] - INFO: lib文件夹已清空
+2022-12-14 20:51:20,478 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202101', folder=True), Child(uri='/bsamlV202201', folder=True)]
+2022-12-14 20:51:20,478 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202101', 'bsamlV202201']
+2022-12-14 20:51:20,478 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:180] - INFO: 获取最新路径：bsamlV202201
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202201.00.000', folder=True), Child(uri='/bsamlV202201.01.000', folder=True), Child(uri='/bsamlV202201.02.000', folder=True), Child(uri='/bsamlV202201.03.000', folder=True), Child(uri='/bsamlV202201.04.000', folder=True), Child(uri='/bsamlV202201.05.000', folder=True), Child(uri='/bsamlV202201.06.000', folder=True), Child(uri='/bsamlV202201.07.000', folder=True), Child(uri='/bsamlV202201.08.000', folder=True)]
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202201.00.000', 'bsamlV202201.01.000', 'bsamlV202201.02.000', 'bsamlV202201.03.000', 'bsamlV202201.04.000', 'bsamlV202201.05.000', 'bsamlV202201.06.000', 'bsamlV202201.07.000', 'bsamlV202201.08.000']
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:185] - INFO: 获取最新版本：bsamlV202201.08.000
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:189] - INFO: V202201.08.000
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'bsaml/os/bsaml%s/bsaml%s', 'name': '', 'start': 'DCT4.0-', 'end': 'zip'}
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.000
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: bsaml/os/bsaml%s/bsaml%s
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:430] - INFO: web升级开始
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:443] - INFO: web升级结束
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:523] - INFO: 下载时间0.0分钟
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:524] - INFO: 解压时间0.0分钟
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:525] - INFO: 覆盖时间0.0分钟
+2022-12-14 20:51:20,493 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:526] - INFO: web升级完毕
+2022-12-14 20:51:20,513 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202101', folder=True), Child(uri='/bsamlV202201', folder=True)]
+2022-12-14 20:51:20,513 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202101', 'bsamlV202201']
+2022-12-14 20:51:20,513 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:180] - INFO: 获取最新路径：bsamlV202201
+2022-12-14 20:51:20,528 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:91] - INFO: Job对象列表为：[Child(uri='/bsamlV202201.00.000', folder=True), Child(uri='/bsamlV202201.01.000', folder=True), Child(uri='/bsamlV202201.02.000', folder=True), Child(uri='/bsamlV202201.03.000', folder=True), Child(uri='/bsamlV202201.04.000', folder=True), Child(uri='/bsamlV202201.05.000', folder=True), Child(uri='/bsamlV202201.06.000', folder=True), Child(uri='/bsamlV202201.07.000', folder=True), Child(uri='/bsamlV202201.08.000', folder=True)]
+2022-12-14 20:51:20,528 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:95] - INFO: Job列表为：['bsamlV202201.00.000', 'bsamlV202201.01.000', 'bsamlV202201.02.000', 'bsamlV202201.03.000', 'bsamlV202201.04.000', 'bsamlV202201.05.000', 'bsamlV202201.06.000', 'bsamlV202201.07.000', 'bsamlV202201.08.000']
+2022-12-14 20:51:20,528 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:185] - INFO: 获取最新版本：bsamlV202201.08.000
+2022-12-14 20:51:20,528 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:189] - INFO: V202201.08.000
+2022-12-14 20:51:20,528 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:192] - INFO: {'package_type': 'database', 'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'bsaml/os/bsamlV202201/bsamlV202201.08.000', 'name': '', 'start': 'DCT4.0-', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:51:20,529 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:201] - INFO: V202201.08.000
+2022-12-14 20:51:20,529 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:202] - INFO: bsaml/os/bsamlV202201/bsamlV202201.08.000
+2022-12-14 20:51:20,529 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:205] - INFO: V202201.08.000
+2022-12-14 20:51:20,529 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:225] - INFO: else param:{'download_path': 'F:\\dowloadftp', 'repo': 'aml4.1-generic-test-local', 'remove_dir': 'bsaml/os/bsamlV202201/bsamlV202201.08.000', 'name': '', 'start': 'DCT4.0-', 'end': 'zip', 'version': 'V202201.08.000'}
+2022-12-14 20:51:20,620 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:79] - INFO: 仓库名称为：['aml4.1-generic-release-local', 'aml4.1-generic-test-local']
+2022-12-14 20:51:20,620 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:43] - INFO: 仓库:aml4.1-generic-test-local存在
+2022-12-14 20:51:20,621 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:44] - INFO: aml4.1-generic-test-local/bsaml/os/bsamlV202201/bsamlV202201.08.000/
+2022-12-14 20:51:20,644 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:107] - INFO: File对象列表为：[Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212020518.zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212020649(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212050508.zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212050622(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212060507.zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212060621(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212070511.zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212070632(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212080507.zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212080621(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212081616(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212081627(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212081820(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212090508.zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212090622(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212090954(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212091006(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212091320(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212091450(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212120507.zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212120620(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212130507.zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212130620(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212140509.zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.202212140627(cz).zip', folder=False), Child(uri='/DCT4.0-BSAML-V202201-08-000-20221228.zip', folder=False)]
+2022-12-14 20:51:20,644 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:110] - INFO: version1:V202201-08-000
+2022-12-14 20:51:20,644 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:118] - INFO: File名称为：DCT4.0-BSAML-V202201-08-000-20221228.202212140627(cz).zip
+2022-12-14 20:51:20,645 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:52] - INFO: 找到以DCT4.0-开头和zip结尾的文件:DCT4.0-BSAML-V202201-08-000-20221228.202212140627(cz).zip
+2022-12-14 20:51:20,645 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:141] - INFO: 开始下载aml4.1-generic-test-local/bsaml/os/bsamlV202201/bsamlV202201.08.000/DCT4.0-BSAML-V202201-08-000-20221228.202212140627(cz).zip:1671022280.645851
+2022-12-14 20:53:04,330 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:144] - INFO: 下载结束aml4.1-generic-test-local/bsaml/os/bsamlV202201/bsamlV202201.08.000/DCT4.0-BSAML-V202201-08-000-20221228.202212140627(cz).zip:1671022384.3300712
+2022-12-14 20:53:04,330 - E:\开发部署工具\webupdate_smoke\jfrog_artifactory_pro.py[line:145] - INFO: 下载用时103.68422031402588
+2022-12-14 20:53:04,330 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:358] - INFO: ['F:\\dowloadftp/DCT4.0-BSAML-V202201-08-000-20221228.202212140627(cz).zip']
+2022-12-14 20:53:08,920 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:420] - INFO: F:\dowloadftp/DCT4.0-BSAML-V202201-08-000-20221228.202212140627(cz).zip解压成功
+2022-12-14 20:53:08,922 - E:\开发部署工具\webupdate_smoke\主干升级.py[line:534] - INFO: dispatchcenter升级完毕
