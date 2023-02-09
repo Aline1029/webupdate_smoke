@@ -11,7 +11,7 @@ import os
 #指定文件夹的路径到sql
 base_path = r"E:\0"
 #指定文件格式，以空格分隔。
-search_exts = '.sql .pkg .txt  '.split(" ")
+search_exts = '.sql .pck .fnc  '.split(" ")
 #要排除的文件夹，以空格分隔。
 exclude_dir ='01 02'.split(" ")
 print(exclude_dir)
@@ -20,8 +20,8 @@ print(exclude_dir)
 def find():
 #保存文件名的列表
     filelist=[]
-    ext=".txt"
-    sqlstring=r"@.\ "
+    ext=".sql"
+
 
 
     #遍历sql文件夹下的所有文件和目录
@@ -53,19 +53,34 @@ def find():
         #遍历目录及其子文件
         for root,dirs,files in os.walk(nowPath):
             for file in files:
-                # 使用join函数将文件名称和文件所在根目录连接起来
-                print("子文件夹下的所有文件",os.path.join(root, file))
-                filelist.append(os.path.join(root, file));
+                for ext in search_exts:
+                    if(file.endswith(ext)):
+                        # 使用join函数将文件名称和文件所在根目录连接起来
+                        print("子文件夹下的所有文件",os.path.join(root, file))
+                        filelist.append(os.path.join(root, file));
 
-    print("filelist",filelist)
+    # print("filelist",filelist)
+    return(filelist)
 
 
 
+def findfilefinal(filelist):
+    sqlstring=r"@.\ "
+    filelistfinal=[]
+    #循环读取list，拼接字符串
+    for i in range(len(filelist)):
+        filelistfinal.append(sqlstring+(filelist[i]))
+    print(filelistfinal)
+    #写入sql文件
+    str='\n'
+    f=open("install.sql", 'w')
+    f.write(str.join(filelistfinal))
+    f.close
 
 
 
-def findfile(path):
-    for root, dirs, files in os.walk(path):
+def findfile():
+    for root, dirs, files in os.walk(base_path):
         print("===root绝对路径===")
         print(root)
 
@@ -135,6 +150,7 @@ def getSpecContent():
 
 if __name__ == "__main__":
     find()
+    findfilefinal(find())
     # getAllContent()
     # getSpecContent()
     # findfile(r'E:\00环境部署\01-测试安装包\1.9测试包升级\03-BS\DCT4.0-BSAML-V202201-09-000-20230215\sql')
