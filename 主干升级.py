@@ -268,6 +268,20 @@ class DbFiles:
         log.logger.info(res)
         global LOCAL_ZIP_PATH
         LOCAL_ZIP_PATH = res
+    def extract_files(self):
+        zip_files = list(set(LOCAL_ZIP_PATH)) #下载列表
+        # zip_files = [ r'E:\dowloadftp\01dc\DCT4.0-DCAML-V202201-09-000-20230215.zip',r'E:\dowloadftp\02dcinterface\DCT4.0-AMLinterface-V202201-09-000-20230215.202302100407.zip']
+        for zip_file in zip_files:
+            file_dir, file_name = os.path.split(zip_file)
+            if zipfile.is_zipfile(zip_file):
+                shutil.unpack_archive(zip_file, file_dir)
+            else:
+                rf = rarfile.RarFile(zip_file)
+                rf.extractall(file_dir)
+            log.logger.info('{0}解压成功'.format(zip_file))
+
+        print('解压完成')
+
 
     def decompression_zip(self):
         zip_files = list(set(LOCAL_ZIP_PATH)) #下载列表
@@ -421,9 +435,10 @@ if __name__ == '__main__':
     log.logger.info('开始升级')
     db = DbFiles()
     db.download_dbfiles()
-    db.decompression_zip()
+    # db.decompression_zip()
+    db.extract_files()
     # runbat = UpdateDb()
     # runbat.newbatrun()
     # log.logger.info('升级完毕')
-    # input('输入任意字符退出：')
-    # exit(0)
+    input('输入任意字符退出：')
+    exit(0)
