@@ -270,13 +270,16 @@ class DbFiles:
         LOCAL_ZIP_PATH = res
 
     def decompression_zip(self):
-        zip_files = list(set(LOCAL_ZIP_PATH))
+        zip_files = list(set(LOCAL_ZIP_PATH)) #下载列表
         for filename in zip_files:
             # unrar_file(log.logger,filename,LOCAL_PATH)
             oldName = ''
             if zipfile.is_zipfile(filename):
+
                 zip_file_contents = zipfile.ZipFile(filename, 'r')
                 for file in zip_file_contents.namelist():
+                    print('*'*10)
+                    print(file)
                     if oldName == '':
                         oldName = LOCAL_PATH + "/" + file
 
@@ -416,25 +419,11 @@ if __name__ == '__main__':
     # t1 = datetime.datetime.now()
 
     log.logger.info('开始升级')
-    # DC取包 下载-解压-升级
     db = DbFiles()
     db.download_dbfiles()
     db.decompression_zip()
-    runbat = UpdateDb()
-    runbat.newbatrun()
-    log.logger.info('升级完毕')
-
-
-    # log.logger.info('BS开始升级')
-    # # DC取包 下载-解压-升级
-    # db = DbFiles()
-    # db.download_dbfiles()
-    # db.unzipfile()
-    # ''' 升级BS数据库bat'''
     # runbat = UpdateDb()
     # runbat.newbatrun()
-    # log.logger.info('BS升级完毕')
-
-
-    input('输入任意字符退出：')
-    exit(0)
+    # log.logger.info('升级完毕')
+    # input('输入任意字符退出：')
+    # exit(0)
