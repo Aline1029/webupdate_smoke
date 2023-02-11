@@ -282,6 +282,20 @@ class DbFiles:
 
         print('解压完成')
 
+    def fanyi(self):
+        for root, dirs, files in os.walk(LOCAL_PATH):
+            for dir_name in dirs:
+                try:
+                    os.rename(os.path.join(root, dir_name), os.path.join(root, dir_name.encode('cp437').decode('gbk')))
+                except Exception as e:
+                    print('Error: {}'.format(e))
+
+            for file_name in files:
+                try:
+                    os.rename(os.path.join(root, file_name), os.path.join(root, file_name.encode('cp437').decode('gbk')))
+                except Exception as e:
+                    print('Error: {}'.format(e))
+
 
     def decompression_zip(self):
         zip_files = list(set(LOCAL_ZIP_PATH)) #下载列表
@@ -437,8 +451,9 @@ if __name__ == '__main__':
     db.download_dbfiles()
     # db.decompression_zip()
     db.extract_files()
+    db.fanyi()
     # runbat = UpdateDb()
     # runbat.newbatrun()
     # log.logger.info('升级完毕')
-    input('输入任意字符退出：')
-    exit(0)
+    # input('输入任意字符退出：')
+    # exit(0)
