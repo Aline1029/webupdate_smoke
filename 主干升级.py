@@ -275,10 +275,11 @@ class DbFiles:
             file_dir, file_name = os.path.split(zip_file)
             if zipfile.is_zipfile(zip_file):
                 shutil.unpack_archive(zip_file, file_dir)
+                log.logger.info('ZIP文件：{0}解压成功'.format(zip_file))
             else:
                 rf = rarfile.RarFile(zip_file)
                 rf.extractall(file_dir)
-            log.logger.info('{0}解压成功'.format(zip_file))
+                log.logger.info('RAR文件：{0}解压成功'.format(zip_file))
 
         print('解压完成')
 
