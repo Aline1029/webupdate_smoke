@@ -1,4 +1,6 @@
-# -*- coding: UTF-8 –*-
+# -*- coding: utf-8 -*-
+import time
+
 import paramiko
 # from unrar import rarfile
 import os
@@ -270,6 +272,13 @@ class DbFiles:
         LOCAL_ZIP_PATH = res
     def extract_files(self):
         zip_files = list(set(LOCAL_ZIP_PATH)) #下载列表
+        zip_files =[
+                       # r'E:\\dowloadftp\\01dc/DCT4.0-DCAML-V202201-09-000-20230215.zip'
+                       r'E:\\dowloadftp\\02dcinterface/DCT4.0-AMLinterface-V202201-09-000-20230215.202302100407.zip'
+                       # r'E:\\dowloadftp\\03BS/DCT4.0-BSAML-V202201-09-000-20230215.202302100545(cz).zip',
+                       # r'E:\\dowloadftp\\04fxq/DCT4.0-BSAMLFxq-V202201-09-000-20230215.202302100510.zip',
+                       ]
+
         # zip_files = [ r'E:\dowloadftp\01dc\DCT4.0-DCAML-V202201-09-000-20230215.zip',r'E:\dowloadftp\02dcinterface\DCT4.0-AMLinterface-V202201-09-000-20230215.202302100407.zip']
         for zip_file in zip_files:
             file_dir, file_name = os.path.split(zip_file)
@@ -283,7 +292,7 @@ class DbFiles:
 
         print('解压完成')
 
-    def fanyi(self):
+    def fanyizip(self):
         for root, dirs, files in os.walk(LOCAL_PATH):
             for dir_name in dirs:
                 try:
@@ -296,23 +305,39 @@ class DbFiles:
                     os.rename(os.path.join(root, file_name), os.path.join(root, file_name.encode('cp437').decode('gbk')))
                 except Exception as e:
                     print('Error: {}'.format(e))
+    def fanyizipinterface(self):
+        for root, dirs, files in os.walk(LOCAL_PATH):
+            for dir_name in dirs:
+                try:
+                    os.rename(os.path.join(root, dir_name), os.path.join(root, dir_name.encode('utf8').decode('gbk')))
+                except Exception as e:
+                    print('Error: {}'.format(e))
 
+            for file_name in files:
+                try:
+                    os.rename(os.path.join(root, file_name), os.path.join(root, file_name.encode('utf8').decode('gbk')))
+                except Exception as e:
+                    print('Error: {}'.format(e))
 
     def decompression_zip(self):
         zip_files = list(set(LOCAL_ZIP_PATH)) #下载列表
+        zip_files = ['E:\dowloadftp\DCT4.0-AMLinterface-V202201-09-000-20230215.202302100407.zip']
+        LOCAL_PATH= 'E:\dowloadftp'
         for filename in zip_files:
             # unrar_file(log.logger,filename,LOCAL_PATH)
             oldName = ''
             if zipfile.is_zipfile(filename):
-
                 zip_file_contents = zipfile.ZipFile(filename, 'r')
                 for file in zip_file_contents.namelist():
-                    print('*'*10)
-                    print(file)
                     if oldName == '':
                         oldName = LOCAL_PATH + "/" + file
+                        print('oldName',oldName)
 
                     fileName = file.encode('cp437').decode('gbk')  # 先使用cp437编码，然后再使用gbk解码
+                    print('filename',fileName)
+                    zip_file_contents.extract(file, LOCAL_PATH)  # 解压缩ZIP文件
+                    os.chdir(LOCAL_PATH)  # 切换到目标目录
+                    os.rename(file, fileName)  # 重命名文件
 
             else:
                 zip_file_contents = rarfile.RarFile(filename, 'r')
@@ -332,7 +357,9 @@ class DbFiles:
     def unzipfile(self):
         # from unRarFile import unrar_file
         zip_files = list(set(LOCAL_ZIP_PATH))
-
+        print("zip_files",zip_files)
+        print("LOCAL_PATH",LOCAL_PATH)
+        # zip_files = ['E:\dowloadftp\DCT4.0-AMLinterface-V202201-09-000-20230215.zip']
         for filename in zip_files:
             # unrar_file(log.logger,filename,LOCAL_PATH)
             oldName = ''
@@ -340,11 +367,13 @@ class DbFiles:
             for file in zip_file_contents.namelist():
                 if oldName == '':
                     oldName = LOCAL_PATH + "/" + file
+                    # print('oldName',oldName)
                 fileName = file.encode('cp437').decode('gbk')  # 先使用cp437编码，然后再使用gbk解码
-                # print(file)
                 zip_file_contents.extract(file, LOCAL_PATH)  # 解压缩ZIP文件
                 os.chdir(LOCAL_PATH)  # 切换到目标目录
                 os.rename(file, fileName)  # 重命名文件
+                time.sleep(1)
+
             zip_file_contents.close()
             shutil.rmtree(oldName)  # 删除旧文件夹
             log.logger.info('{0}解压成功'.format(filename))
@@ -451,8 +480,12 @@ if __name__ == '__main__':
     db = DbFiles()
     db.download_dbfiles()
     # db.decompression_zip()
-    db.extract_files()
-    db.fanyi()
+
+    # db.unzipfile()
+
+    # db.extract_files()
+    # db.fanyizipinterface()
+
     # runbat = UpdateDb()
     # runbat.newbatrun()
     # log.logger.info('升级完毕')
