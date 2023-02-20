@@ -318,6 +318,7 @@ class DbFiles:
     def decompression_zip(self):
         zip_files = list(set(LOCAL_ZIP_PATH)) #下载列表
         for filename in zip_files:
+            expresspath = filename[:filename.find('/')]
             # unrar_file(log.logger,filename,LOCAL_PATH)
             oldName = ''
             if zipfile.is_zipfile(filename):
@@ -326,9 +327,8 @@ class DbFiles:
                     # if oldName == '':
                     # oldName = LOCAL_PATH + "/" + file
                     fileName = file.encode('cp437').decode('gbk')  # 先使用cp437编码，然后再使用gbk解码
-                    print('filename',fileName)
-                    zip_file_contents.extract(file, LOCAL_PATH)  # 解压缩ZIP文件
-                    os.chdir(LOCAL_PATH)  # 切换到目标目录
+                    zip_file_contents.extract(file,expresspath)  # 解压缩ZIP文件
+                    os.chdir(expresspath)  # 切换到目标目录
                     os.rename(file, fileName)  # 重命名文件
 
             else:
@@ -354,7 +354,6 @@ class DbFiles:
                     if not len(os.listdir(dir_path)):
                         os.rmdir(dir_path)
                         time.sleep(1)
-                        # print("rm dir:", dir_path)
 
     # 解压db zip文件
     def unzipfile(self):
@@ -480,10 +479,10 @@ if __name__ == '__main__':
     db = DbFiles()
 
 
-    # db.download_dbfiles()
+    db.download_dbfiles()
     # db.unzipfile()
 
-    #db.decompression_zip()
+    db.decompression_zip()
     for i in range (3):
         db.remove_empty()
 
