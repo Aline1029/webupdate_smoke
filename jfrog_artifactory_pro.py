@@ -112,9 +112,9 @@ class TestArtifactory:
             for file in file_list_tamp:
                 if version1 in file.uri[1:] and not file.uri[1:].split(version1)[-1][0].isdigit():
                     file_list.append(file.uri[1:])
-
-            # file_name = max(file_list)
-            file_name = max(filter(lambda x:len(x)==max(len(f) for f in file_list), file_list))
+            #取出长度最短的
+            file_name = max(file_list)
+            # file_name = max(filter(lambda x:len(x)==max(len(f) for f in file_list), file_list))
             self.log.info('File名称为：{}'.format(file_name))
             return file_name
         else:
