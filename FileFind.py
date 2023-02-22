@@ -8,8 +8,9 @@
 """
 
 import os
+from pathlib import Path
 #指定文件夹的路径到sql
-base_path = r"E:\00环境部署\01-测试安装包\1.8测试包升级\04-bs-add\基金\sql"
+base_path = r"E:\dowloadftp\01dc\DCT4.0-DCAML-V202201-10-000-20230315\sql"
 #指定文件格式，以空格分隔。
 search_exts = '.sql .pck .fnc .prc'.split(" ")
 
@@ -17,9 +18,13 @@ search_exts = '.sql .pck .fnc .prc'.split(" ")
 #保存文件名的列表
 
 
-#行业
-hy=1
-
+#找到sql文件夹
+def findsqldir(path):
+    dc_base_path = Path((path).strip())
+    keyword = 'sql'.strip()
+    base_path = list(dc_base_path.rglob(keyword))[0]
+    print(base_path)
+    return base_path
 
 #sql根目录文件处理
 def findroot(base_path):
@@ -69,7 +74,7 @@ def findrootnext(base_path):
 
 
 #遍历行业目录及其子文件
-def findbshy():
+def findbshy(base_path,hy):
     filelist=[]
     #拼接行业路径
     JJPath= base_path+ "\行业脚本\基金行业"
@@ -92,7 +97,7 @@ def findbshy():
                         filelist.append(os.path.join(root, file));
     return filelist
 
-def findaddhy():
+def findaddhy(base_path,hy):
 
     #拼接行业路径
     HYRoot= base_path+ r"\02-行业脚本"
@@ -126,53 +131,78 @@ def findaddhy():
     return filelist
 
 def findDCfiles():
+
+    dc_base_path = r"E:\dowloadftp\01dc"
+    base_path=str(findsqldir(dc_base_path))
     fileDClist=findroot(base_path)+findrootnext(base_path);
+    return fileDClist
     # print('*'*10)
     # print(fileDClist)
 
 def findDCInterfacefiles():
+    dcinterface_base_path= r"E:\dowloadftp\02dcinterface"
+    base_path=str(findsqldir(dcinterface_base_path))
     findDCInterfacelist=findroot(base_path)+findrootnext(base_path);
     # print('*'*10)
-    # print(findDCInterfacelist)
+    print(findDCInterfacelist)
+    return findDCInterfacelist
 
 
-def findbsfiles():
-    filebslist=findroot(base_path)+findrootnext(base_path)+findbshy();
+def findbsfiles(hy):
+    bs_base_path = r"E:\dowloadftp\03BS"
+    base_path=str(findsqldir(bs_base_path))
+    filebslist=findroot(base_path)+findrootnext(base_path)+findbshy(base_path,hy);
     # print('*'*10)
     # print(filebslist)
+    return filebslist
 
 def findFXQfiles():
+    FXQ_base_path=r"E:\dowloadftp\04fxq"
+    base_path=str(findsqldir(FXQ_base_path))
     findFXQlist=findroot(base_path)+findrootnext(base_path);
     # print('*'*10)
     # print(findFXQlist)
+    return findFXQlist
 
-def findADDfiles():
-    findADDfiles=findroot(base_path)+findrootnext(base_path)+findaddhy();
+def findADDfiles(hy):
+    add_base_path=r"E:\dowloadftp\05add"
+    base_path=str(findsqldir(add_base_path))
+    findADDfiles=findroot(base_path)+findrootnext(base_path)+findaddhy(base_path,hy);
     print('*'*10)
     print(findADDfiles)
+    return findADDfiles
 
-
+def BSALLfiles(hy):
+    bsallfiles= findDCfiles()+findDCInterfacefiles()+findbsfiles(hy)+findFXQfiles()+findADDfiles(hy)
+    print(bsallfiles)
+    return bsallfiles
 
 #list拼接@字符
-# def findfilefinal(filelist):
-#     sqlstring=r"@"
-#     filelistfinal=[]
-#     #循环读取list，拼接字符串
-#     for i in range(len(filelist)):
-#         filelistfinal.append(sqlstring+(filelist[i]))
-#     print(filelistfinal)
-#     #写入sql文件
-#     str='\n'
-#     f=open("installBS.sql", 'w')
-#     f.write(str.join(filelistfinal))
-#     f.close
+def findfilefinal(filelist,hy):
+    sqlstring=r"@"
+    filelistfinal=[]
+    #循环读取list，拼接字符串
+    for i in range(len(filelist)):
+        filelistfinal.append(sqlstring+(filelist[i]))
+    print(filelistfinal)
+    #写入sql文件
+    str='\n'
+    if hy== 1 :
+        f=open(r"E:\dowloadftp\installbsjj.sql", 'w')
+    else:
+        f=open(r"E:\dowloadftp\installbsxt.sql", 'w')
+    f.write('set define off;\n')
+    f.write(str.join(filelistfinal))
+    f.close
 
 
 if __name__ == "__main__":
 
-
-    findDCfiles()
-    findADDfiles()
+    findfilefinal(BSALLfiles(1),1)
+    findfilefinal(BSALLfiles(2),2)
+    # findDCfiles()
+    # findDCInterfacefiles()
+    # findADDfiles()
     # findfilefinal()
     # getAllContent()
     # getSpecContent()

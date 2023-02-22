@@ -8,7 +8,9 @@ from logging import handlers
 import zipfile
 import rarfile
 import shutil
+
 from jfrog_artifactory_pro import Download
+import FileFind
 
 global LINES_START
 global LINES_END
@@ -16,22 +18,109 @@ global LINES_END
 
 
 LINES_START = '''@echo off
-    color a
-    :loop
-    echo.
-    echo ************************************************************
-    echo *                                                          *
-    echo *                                                          *
-    echo *      4.1开始升级                                          *
-    echo *                                                          *
-    echo *                                                          *
-    echo ************************************************************
-    echo.
-    title 恒生反洗钱系统4.1升级
+color a
+:loop
+echo.
+echo ************************************************************
+echo *                                                          *
+echo *                                                         	*
+echo *     恒生4.1反洗钱系统BS                                	    *
+echo *                                                          *
+echo *                                                          *
+echo ************************************************************
+echo.
+title 恒生4.1反洗钱系统升级
     '''
-LINES_END = '''type .\log\install.log | find /i /n "ora-" > .\log\install.txt
-    type .\log\install.log | find /i /n "警告" >> .\log\install.txt
-    type .\log\install.log | find /i /n "SP2" >> .\log\install.txt
+LINES_END = ''':choose
+echo.
+echo ************************************************************
+echo *                                                          *
+echo * 请选择升级的系统和行业:                        		        *
+echo *     1－BS基金                     			            *
+echo *     2－BS信托 				                            *
+echo *     3－CS基金					                            *
+echo *     4－CS信托					                            *											
+echo *     C－退出安装                                          	*
+echo *                                                          *
+echo ************************************************************
+echo.
+set /p dropbackflag=如果输入"C"将退出升级过程:
+if %dropbackflag%==C goto end
+if %dropbackflag%==c goto end
+if %dropbackflag%==1 goto installbsjj
+if %dropbackflag%==2 goto installbsxt
+if %dropbackflag%==3 goto installcsjs
+if %dropbackflag%==4 goto installcsxt
+goto end
+
+
+:installbsjj
+echo.
+echo ************************************************************
+echo *                                                          *
+echo *                                                          *
+echo *             正在升级:BS基金                                 *
+echo *                                                          *
+echo *                                                          *
+echo ************************************************************
+sqlplus %hsconuser%/%hsconpwd%@%tnsname% @.\Installbsjj.sql 
+type .\log\install.log | find /i /n "ora-" > .\log\install.txt
+type .\log\install.log | find /i /n "警告" >> .\log\install.txt
+type .\log\install.log | find /i /n "SP2" >> .\log\install.txt
+echo.
+type .\log\install.txt
+find /v "" /c  .\log\install.txt
+
+:installbsxt
+echo.
+echo ************************************************************
+echo *                                                          *
+echo *                                                          *
+echo *             正在升级:BS信托                                *
+echo *                                                          *
+echo *                                                          *
+echo ************************************************************
+sqlplus %hsconuser%/%hsconpwd%@%tnsname% @.\Installbsxt.sql 
+type .\log\install.log | find /i /n "ora-" > .\log\install.txt
+type .\log\install.log | find /i /n "警告" >> .\log\install.txt
+type .\log\install.log | find /i /n "SP2" >> .\log\install.txt
+echo.
+type .\log\install.txt
+find /v "" /c  .\log\install.txt
+
+if %errorlevel% == 0 (
+echo.
+echo ************************************************************
+echo *                                                         	*
+echo *        升级完毕，但出现错误，请查看上面错误信息          	    *
+echo *                                                          *
+echo ************************************************************
+echo.
+goto end
+) else (
+echo.
+echo ************************************************************
+echo *                                                          *
+echo *                         升级成功                    	    *
+echo *                                                          *
+echo ************************************************************
+echo.
+goto finsh
+)
+:finsh
+echo.
+echo ************************************************************
+echo *                                                           	*
+echo *                                                           	*
+echo *             恒生反洗钱4.1主干升级完毕    	                    *
+echo *                                                           	*
+echo *                                                           	*
+echo ************************************************************
+echo.
+goto end
+:end
+echo 按任意键退出
+pause > nul
     '''
 
 
@@ -219,6 +308,8 @@ class ConfigParam:
 
         global TNSNAME
         TNSNAME = Public.readini('dbuser', 'tnsname')
+        global USER_NAME
+        USER_NAME = Public.readini('dbuser', 'user_name')
         global USER_PWD
         USER_PWD = Public.readini('dbuser', 'user_pwd')
 
@@ -268,12 +359,33 @@ class DbFiles:
         LOCAL_ZIP_PATH = res
     def extract_files(self):
         zip_files = list(set(LOCAL_ZIP_PATH)) #下载列表
-        zip_files =[
-                       # r'E:\\dowloadftp\\01dc/DCT4.0-DCAML-V202201-09-000-20230215.zip'
-                       r'E:\dowloadftp\02dcinterface/DCT4.0-AMLinterface-V202201-09-000-20230215.202302160406.zip'
-                       # r'E:\\dowloadftp\\03BS/DCT4.0-BSAML-V202201-09-000-20230215.202302100545(cz).zip',
-                       # r'E:\\dowloadftp\\04fxq/DCT4.0-BSAMLFxq-V202201-09-000-20230215.202302100510.zip',
-                       ]
+        #add zip文件解压
+        # zip_files=[r'E:\\dowloadftp\\05add/DCT4.0-BSAML2019CSDC-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLDataCheck-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLnewBigdataRule-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLInstitutionRiskAssess-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLCRS-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLPBOC2019No63-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLCustomrules-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLFinancingSide-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLSimilarCustManage-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLLegalBusinRisk-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLMultiCurrency-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLProductRiskAssess-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLBoi-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLInstitutionSelfAssessmentOne-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLAccuity-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLCrg-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLAgencyrisk-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLExternalListUse-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLAgencyCustInfoManage-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLDueDiligence-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLFileManagement-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLWorldCheck-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLPom-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLInfoSec-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLBigdataRule-V202201-10-000-20230315.zip',
+        #            r'E:\\dowloadftp\\05add/DCT4.0-BSAMLDowJones-V202201-10-000-20230315.zip']
         for zip_file in zip_files:
             file_dir, file_name = os.path.split(zip_file)
             if zipfile.is_zipfile(zip_file):
@@ -285,40 +397,44 @@ class DbFiles:
                 log.logger.info('RAR文件：{0}解压成功'.format(zip_file))
 
         print('解压完成')
+    def an_garcode(self,dir_names):
+        """anti garbled code"""
+        os.chdir(dir_names)
 
-    def rename_files_and_folders(self):
-        # 遍历当前目录下的所有文件和文件夹
-        for file_name in os.listdir(LOCAL_PATH):
-            # 拼接文件的完整路径
-            file_path = os.path.join(LOCAL_PATH, file_name)
-            # 判断当前路径是否为文件夹
-            if os.path.isdir(file_path):
-                # 对文件夹进行重命名
-                os.rename(file_path, file_path.encode('cp437').decode('gbk'))
-                # 如果是文件夹，递归调用自身
-                self.rename_files_and_folders()
 
-            else:
-                #如果是文件，对文件进行重命名
-                os.rename(file_path, file_path.encode('cp437').decode('gbk'))
-    def fanyizipinterface(self):
-        for root, dirs, files in os.walk(LOCAL_PATH):
-            for dir_name in dirs:
-                try:
-                    os.rename(os.path.join(root, dir_name), os.path.join(root, dir_name.encode('utf8').decode('gbk')))
-                except Exception as e:
-                    print('Error: {}'.format(e))
+        for temp_name in os.listdir('.'):
+            try:
+                #使用cp437对文件名进行解码还原
+                new_name = temp_name.encode('cp437')
+                #win下一般使用的是gbk编码
+                new_name = new_name.decode("gbk")
+                #对乱码的文件名及文件夹名进行重命名
+                os.rename(temp_name, new_name)
+                #传回重新编码的文件名给原文件名
+                temp_name = new_name
+            except:
+                #如果已被正确识别为utf8编码时则不需再编码
+                pass
 
-            for file_name in files:
-                try:
-                    os.rename(os.path.join(root, file_name), os.path.join(root, file_name.encode('utf8').decode('gbk')))
-                except Exception as e:
-                    print('Error: {}'.format(e))
+
+            if os.path.isdir(temp_name):
+                #对子文件夹进行递归调用
+                self.an_garcode(temp_name)
+                #记得返回上级目录
+                os.chdir('..')
+
+
+
+
+
 
     def decompression_zip(self):
         zip_files = list(set(LOCAL_ZIP_PATH)) #下载列表
+        # zip_files =['E:\\dowloadftp\\01dc/DCT4.0-DCAML-V202201-10-000-20230315.zip', 'E:\\dowloadftp\\02dcinterface/DCT4.0-AMLinterface-V202201-10-000-20230315.202302200644.zip']
         for filename in zip_files:
             expresspath = filename[:filename.find('/')]
+            findpath = filename[:filename.rfind('.')]
+            print("findpath",findpath)
             # unrar_file(log.logger,filename,LOCAL_PATH)
             oldName = ''
             if zipfile.is_zipfile(filename):
@@ -353,7 +469,7 @@ class DbFiles:
                     dir_path = os.path.join(root_path, dn)
                     if not len(os.listdir(dir_path)):
                         os.rmdir(dir_path)
-                        time.sleep(1)
+
 
     # 解压db zip文件
     def unzipfile(self):
@@ -436,29 +552,46 @@ class UpdateWeb:
 
 class UpdateDb:
     def newbatrun(self):
-        for localPatchName in LOCAL_ZIP_PATH:
-            # LOCAL_ZIP_PATH = ['E:\\dowloadftp\\FERM20-平台基础升级包(基于V202003-0-0)_V202003-1-0beta202008090321.zip',
-            #                   'E:\\dowloadftp\\SCM40-合规升级包(基于V202003-0-0)_V202003-1-0beta202008070313.zip']
-            # batFile = localPatchName.split('.zip')[0] + '/install.bat'
-            sqlFile = localPatchName.split('.zip')[0] + '/sql/install.sql'
-            installbatNew = localPatchName.split('.zip')[0] + '/installNew.bat'
-            sqlFile = open(sqlFile, 'r')
-            installbatNewFile = open(installbatNew, 'w+')
-            new_lines = ''
-            for line in sqlFile:
+        batFile = os.getcwd() + '/install.bat'
+        installbatNew = LOCAL_PATH + '/installNew.bat'
+        installbat = open(batFile, 'r')
+        installbatNewFile = open(installbatNew, 'w+')
+        new_lines = ''
+        installbat.seek(0)
+        for line in installbat:
+            if '数据库别名' in line:
+                line = line.replace(' /p ', ' ')
+                line = line.split('=')[0] + '=' + TNSNAME + '\n'
                 new_lines = new_lines + line
-            new_lines = LINES_START + new_lines + LINES_END
-            # print new_lines
-            installbatNewFile.seek(0)
-            installbatNewFile.truncate()
-            installbatNewFile.write(new_lines)
-            sqlFile.close()
-            installbatNewFile.close()
 
-            os.chdir(localPatchName.split('.zip')[0])
-            # print localPatchName.split('.zip')[0].encode('gb2312')
-            os.system('call installNew.bat')
-            log.logger.info('升级{0}完毕'.format(localPatchName))
+            if '用户名' in line:
+                line = line.replace(' /p ', ' ')
+                line = line.split('=')[0] + '=' + USER_NAME + '\n'
+                new_lines = new_lines + line
+
+            if '密码' in line:
+                line = line.replace(' /p ', ' ')
+                # print(line)
+                line = line.split('=')[0] + '=' + USER_PWD + '\n'
+                # print(line)
+                new_lines = new_lines + line
+
+
+
+            if 'Install.sql' in line or 'install.sql' in line:
+                new_lines = new_lines + line
+        new_lines = LINES_START + new_lines + LINES_END
+        # print new_lines
+        installbatNewFile.seek(0)
+        installbatNewFile.truncate()
+        installbatNewFile.write(new_lines)
+        # installbatNewFile.flush()
+        installbat.close()
+        installbatNewFile.close()
+
+        os.chdir(LOCAL_PATH)
+        os.system('call installNew.bat')
+        log.logger.info('升级BS完毕')
 
 
 if __name__ == '__main__':
@@ -475,24 +608,27 @@ if __name__ == '__main__':
     # web.un_zip()
     # t1 = datetime.datetime.now()
 
-    log.logger.info('开始升级')
-    db = DbFiles()
-
-
-    db.download_dbfiles()
-    # db.unzipfile()
-
-    db.decompression_zip()
-    for i in range (3):
-        db.remove_empty()
-
+    # #DB部署
+    # log.logger.info('BS DB开始升级')
+    # db = DbFiles()
+    # log.logger.info('下载包')
+    # db.download_dbfiles()
+    # log.logger.info('解压包')
     # db.extract_files()
-    # db.rename_files_and_folders()
+    # log.logger.info('解决乱码')
+    # db.an_garcode('E:\dowloadftp')
+    # db.remove_empty()
+    #
+    # #生成sql文件
+    # FileFind.findfilefinal(FileFind.BSALLfiles(1),1)
+    # FileFind.findfilefinal(FileFind.BSALLfiles(2),2)
 
-    # db.fanyizipinterface()
+    ''' 升级数据库bat'''
+    runbat = UpdateDb()
+    runbat.newbatrun()
+    log.logger.info('数据库升级完毕')
 
-    # runbat = UpdateDb()
-    # runbat.newbatrun()
-    # log.logger.info('升级完毕')
-    # input('输入任意字符退出：')
-    # exit(0)
+
+    log.logger.info('BS DB升级完毕')
+    input('输入任意字符退出：')
+    exit(0)
