@@ -608,20 +608,20 @@ if __name__ == '__main__':
     # web.un_zip()
     # t1 = datetime.datetime.now()
 
-    # #DB部署
-    # log.logger.info('BS DB开始升级')
-    # db = DbFiles()
-    # log.logger.info('下载包')
-    # db.download_dbfiles()
-    # log.logger.info('解压包')
-    # db.extract_files()
-    # log.logger.info('解决乱码')
-    # db.an_garcode('E:\dowloadftp')
-    # db.remove_empty()
-    #
-    # #生成sql文件
-    # FileFind.findfilefinal(FileFind.BSALLfiles(1),1)
-    # FileFind.findfilefinal(FileFind.BSALLfiles(2),2)
+    #DB部署
+    log.logger.info('BS DB开始升级')
+    db = DbFiles()
+    log.logger.info('下载包')
+    db.download_dbfiles()
+    log.logger.info('解压包')
+    db.extract_files()
+    log.logger.info('解决乱码')
+    db.an_garcode('E:\dowloadftp')
+    db.remove_empty()
+
+    #生成sql文件
+    FileFind.findfilefinal(FileFind.BSALLfiles(1),1)
+    FileFind.findfilefinal(FileFind.BSALLfiles(2),2)
 
     ''' 升级数据库bat'''
     runbat = UpdateDb()
