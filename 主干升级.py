@@ -551,6 +551,22 @@ class UpdateWeb:
 
 
 class UpdateDb:
+    def newsql(self,file,old_string,new_string):
+        """
+        替换文件中的字符串
+        :param file:
+        :param old_string:
+        :param new_string:
+        :return:
+        """
+        file_data=""
+        with open(file,"r",encoding="GB2312") as  f:
+            for line in f:
+                if old_string in line:
+                    line=line.replace(old_string,new_string)
+                file_data+=line
+        with open(file,"w",encoding="GB2312") as f:
+            f.write(file_data)
     def newbatrun(self):
         installbatNew = LOCAL_PATH + '/installNew.bat'
         installbat = open('install.bat', 'r')
@@ -624,8 +640,13 @@ if __name__ == '__main__':
 
     ''' 升级数据库bat'''
     runbat = UpdateDb()
+    runbat.newsql('E:\dowloadftp\installbsjj.sql','@E:\dowloadftp','@.')
+    runbat.newsql('E:\dowloadftp\installbsxt.sql','@E:\dowloadftp','@.')
     runbat.newbatrun()
     log.logger.info('数据库升级完毕')
+
+
+
 
 
     log.logger.info('BS DB升级完毕')
