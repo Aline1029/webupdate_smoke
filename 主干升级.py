@@ -552,9 +552,8 @@ class UpdateWeb:
 
 class UpdateDb:
     def newbatrun(self):
-        batFile = os.getcwd() + '/install.bat'
         installbatNew = LOCAL_PATH + '/installNew.bat'
-        installbat = open(batFile, 'r')
+        installbat = open('install.bat', 'r')
         installbatNewFile = open(installbatNew, 'w+')
         new_lines = ''
         installbat.seek(0)
