@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import os
 import configparser
+import shutil
+
 """
     ====================
     Auther：林雅静
@@ -9,6 +11,18 @@ import configparser
     =========================
 """
 class Public:
+    def mycopyfile(srcfile,dstpath):                       # 复制函数
+        """复制文件到指定文件夹"""
+        if not os.path.isfile(srcfile):
+            print ("%s not exist!"%(srcfile))
+        else:
+            fpath,fname=os.path.split(srcfile)             # 分离文件名和路径
+            if not os.path.exists(dstpath):
+                os.makedirs(dstpath)                       # 创建路径
+            shutil.copy(srcfile, dstpath + fname)          # 复制文件
+            print ("copy %s -> %s"%(srcfile, dstpath + fname))
+
+
 
     # 把A文件夹下的文件复制到B文件夹下
     def vanxkr_copy_tree(in_dir, out_dir, write_exists=False, tabnum=0):

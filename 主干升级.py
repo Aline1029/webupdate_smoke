@@ -263,6 +263,21 @@ def get_beta_by_version(betas):
 
 
 class DbFiles:
+    def copy_file(self):
+        """
+        复制文件到指定目录
+        :return:
+        """
+        batpath=sys.argv[0].rsplit("\\",1)[0]+'/installNew - 38.95.bat'
+        print("batpath",batpath)
+        batpath1=sys.argv[0].rsplit("\\",1)[0]+ '/installNew - 45.130 xt.bat'
+        print("batpath1",batpath1)
+        outpath=LOCAL_PATH+'/'
+        print("outpath",outpath)
+        Public.mycopyfile(batpath, outpath)
+        Public.mycopyfile(batpath1, outpath)
+
+
     def clean_local(self):
         """
         '清空本地下载文件夹'
@@ -553,37 +568,36 @@ if __name__ == '__main__':
 
     dd = Download(log=log.logger, arg=(baseinfo, download_list))
 
-
+    db = DbFiles()
 
     #DB部署
-    log.logger.info('BS开始升级')
-    db = DbFiles()
-    log.logger.info('清空本地文件夹')
-    db.clean_local()
-    log.logger.info('下载包')
-    db.download_dbfiles()
-    log.logger.info('解压包')
-    db.extract_files()
-    log.logger.info('解决乱码')
-    db.an_garcode('E:\dowloadftp')
-    db.remove_empty()
+    # log.logger.info('BS开始升级')
+    # log.logger.info('清空本地文件夹')
+    # db.clean_local()
+    # log.logger.info('下载包')
+    # db.download_dbfiles()
+    # log.logger.info('解压包')
+    # db.extract_files()
+    # log.logger.info('解决乱码')
+    # db.an_garcode('E:\dowloadftp')
+    # db.remove_empty()
 
     #生成sql文件
-    FileFind.findfilefinal(FileFind.BSALLfiles(1),1)
-    FileFind.findfilefinal(FileFind.BSALLfiles(2),2)
+    # FileFind.findfilefinal(FileFind.BSALLfiles(1),1)
+    # FileFind.findfilefinal(FileFind.BSALLfiles(2),2)
+    #
+    # db.newlogpath()
 
-    db.newlogpath()
-
-    ''' 升级数据库bat'''
-    runbat = UpdateDb()
-    runbat.newsql('E:\dowloadftp\installbsjj.sql','@E:\dowloadftp','@.')
-    runbat.newsql('E:\dowloadftp\installbsxt.sql','@E:\dowloadftp','@.')
-    runbat.newbatrun()
-    log.logger.info('数据库升级完毕')
-
-
+    # ''' 升级数据库bat'''
+    # runbat = UpdateDb()
+    # runbat.newsql('E:\dowloadftp\installbsjj.sql','@E:\dowloadftp','@.')
+    # runbat.newsql('E:\dowloadftp\installbsxt.sql','@E:\dowloadftp','@.')
+    # runbat.newbatrun()
+    # log.logger.info('数据库升级完毕')
 
 
+
+    db.copy_file()
 
 
 
