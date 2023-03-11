@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-
+import sys
 import logging
 from datetime import datetime
 from logging import handlers
@@ -506,7 +506,7 @@ class UpdateDb:
             f.write(file_data)
     def newbatrun(self):
         installbatNew = LOCAL_PATH + '/installNew.bat'
-        installbat = open(os.getcwd()+'/install.bat', 'r', encoding='GB2312')
+        installbat = open(sys.path[0]+'/install.bat', 'r', encoding='GB2312')
         installbatNewFile = open(installbatNew, 'w+',encoding='GB2312')
         new_lines = ''
         installbat.seek(0)
