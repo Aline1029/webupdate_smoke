@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import time
 
 import os
 
@@ -264,10 +263,24 @@ def get_beta_by_version(betas):
 
 
 class DbFiles:
-    """
-    创建log文件夹
-    """
+    def clean_local(self):
+        """
+        '清空本地下载文件夹'
+        :return:
+        """
+        Public.del_directory(LOCAL_PATH)
+        log.logger.info('本地文件夹已清空')
+        '清空升级前要删除的lib文件夹'
+        libs = Public.readini_sec('deleledir', type='2')
+        for lib in libs:
+            Public.del_directory(lib)
+        log.logger.info('lib文件夹已清空')
+
     def newlogpath(self):
+        """
+         创建log文件夹
+        :return:
+        """
         log_path= 'E:\dowloadftp\log'
         if os.path.exists(log_path):
             print(f'文件夹{log_path}已存在')
@@ -493,7 +506,7 @@ class UpdateDb:
             f.write(file_data)
     def newbatrun(self):
         installbatNew = LOCAL_PATH + '/installNew.bat'
-        installbat = open('install.bat', 'r', encoding='GB2312')
+        installbat = open(os.getcwd()+'/install.bat', 'r', encoding='GB2312')
         installbatNewFile = open(installbatNew, 'w+',encoding='GB2312')
         new_lines = ''
         installbat.seek(0)
@@ -543,15 +556,17 @@ if __name__ == '__main__':
 
 
     #DB部署
-    log.logger.info('BS DB开始升级')
+    log.logger.info('BS开始升级')
     db = DbFiles()
-    # log.logger.info('下载包')
-    # db.download_dbfiles()
-    # log.logger.info('解压包')
-    # db.extract_files()
-    # log.logger.info('解决乱码')
-    # db.an_garcode('E:\dowloadftp')
-    # db.remove_empty()
+    log.logger.info('清空本地文件夹')
+    db.clean_local()
+    log.logger.info('下载包')
+    db.download_dbfiles()
+    log.logger.info('解压包')
+    db.extract_files()
+    log.logger.info('解决乱码')
+    db.an_garcode('E:\dowloadftp')
+    db.remove_empty()
 
     #生成sql文件
     FileFind.findfilefinal(FileFind.BSALLfiles(1),1)
@@ -570,16 +585,15 @@ if __name__ == '__main__':
 
 
 
-    log.logger.info('BS DB升级完毕')
+
 
 
     # web部署
     web = WebFiles()
     t0 = datetime.now()
-    # web.rename()
     # web.un_zip()
     t1 = datetime.now()
 
-
+    log.logger.info('BS升级完毕')
     # input('输入任意字符退出：')
     # exit(0)
