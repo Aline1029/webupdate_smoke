@@ -79,12 +79,36 @@ def findrootnext(base_path):
     return filelistnext
 
 
-#遍历行业目录及其子文件
+#遍历BS行业目录及其子文件
 def findbshy(base_path,hy):
     filelist=[]
     #拼接行业路径
     JJPath= base_path+ "\行业脚本\基金行业"
     XTPath= base_path+ "\行业脚本\信托行业"
+    if hy==1:
+        for root,dirs,files in os.walk(JJPath):
+            for file in files:
+                for ext in search_exts:
+                    if(file.endswith(ext)):
+                        # 使用join函数将文件名称和文件所在根目录连接起来
+                        print("基金行业子文件夹下的所有文件",os.path.join(root, file))
+                        filelist.append(os.path.join(root, file));
+    else:
+        for root,dirs,files in os.walk(XTPath):
+            for file in files:
+                for ext in search_exts:
+                    if(file.endswith(ext)):
+                        # 使用join函数将文件名称和文件所在根目录连接起来
+                        print("信托行业子文件夹下的所有文件",os.path.join(root, file))
+                        filelist.append(os.path.join(root, file));
+    return filelist
+
+#遍历CS行业目录及其子文件
+def findcshy(base_path,hy):
+    filelist=[]
+    #拼接行业路径
+    JJPath= base_path+ r"\02-行业脚本\基金行业"
+    XTPath= base_path+ r"\02-行业脚本\信托行业"
     if hy==1:
         for root,dirs,files in os.walk(JJPath):
             for file in files:
@@ -183,6 +207,14 @@ def findbsfiles(hy):
     # print(filebslist)
     return filebslist
 
+def findcsfiles(hy):
+    cs_base_path=LOCAL_PATH+r"\07cs"
+    base_path=str(findsqldir(cs_base_path))
+    filecslist=findroot(base_path)+findrootnext(base_path)+findcshy(base_path,hy);
+    return filecslist
+
+
+
 def findFXQfiles():
     FXQ_base_path=LOCAL_PATH+r"\04fxq"
     base_path=str(findsqldir(FXQ_base_path))
@@ -204,6 +236,13 @@ def BSALLfiles(hy):
     print(bsallfiles)
     return bsallfiles
 
+def CSALLfiles(hy):
+    csallfiles= findDCfiles()+findcsfiles(hy)
+    print(csallfiles)
+    return csallfiles
+
+
+
 #list拼接@字符
 def findfilefinal(filelist,hy):
     sqlstring=r"@"
@@ -211,7 +250,7 @@ def findfilefinal(filelist,hy):
     #循环读取list，拼接字符串
     for i in range(len(filelist)):
         filelistfinal.append(sqlstring+(filelist[i]))
-    print(filelistfinal)
+    # print(filelistfinal)
     #开头写入sql文件
     str='\n'
     if hy== 1 :
@@ -230,11 +269,39 @@ def findfilefinal(filelist,hy):
     f.write('\nspool off \n')
     f.close
 
+def findCSfilefinal(filelist,hy):
+    sqlstring=r"@"
+    fileCSlistfinal=[]
+    #循环读取list，拼接字符串
+    for i in range(len(filelist)):
+        fileCSlistfinal.append(sqlstring+(filelist[i]))
+    print("fileCSlistfinal",fileCSlistfinal)
+    #开头写入sql文件
+    str='\n'
+    if hy== 1 :
+        f1=open(r"E:\dowloadftp\installcsjj.sql", 'w',encoding='GB2312')
+    else:
+        f1=open(r"E:\dowloadftp\installcsxt.sql", 'w',encoding='GB2312')
+    f1.write('set define off;\n')
+    f1.write('spool .\log\install.log \n')
+    f1.write(str.join(fileCSlistfinal))
+    f1.close
+    #结尾写入sql文件
+    if hy== 1 :
+        f1=open(r"E:\dowloadftp\installcsjj.sql", 'a',encoding='GB2312')
+    else:
+        f1=open(r"E:\dowloadftp\installcsxt.sql", 'a',encoding='GB2312')
+    f1.write('\nspool off \n')
+    f1.close
+
 
 if __name__ == "__main__":
 
     findfilefinal(BSALLfiles(1),1)
     findfilefinal(BSALLfiles(2),2)
+    findCSfilefinal(CSALLfiles(1),1)
+    findCSfilefinal(CSALLfiles(2),2)
+
 
     # findDCfiles()
     # findDCInterfacefiles()

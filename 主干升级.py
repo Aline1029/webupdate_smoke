@@ -571,33 +571,40 @@ if __name__ == '__main__':
     db = DbFiles()
 
     #DB部署
-    # log.logger.info('BS开始升级')
-    # log.logger.info('清空本地文件夹')
-    # db.clean_local()
-    # log.logger.info('下载包')
-    # db.download_dbfiles()
-    # log.logger.info('解压包')
-    # db.extract_files()
-    # log.logger.info('解决乱码')
-    # db.an_garcode('E:\dowloadftp')
-    # db.remove_empty()
+    log.logger.info('BS开始升级')
+    log.logger.info('清空本地文件夹')
+    db.clean_local()
+    log.logger.info('下载包')
+    db.download_dbfiles()
+    log.logger.info('解压包')
+    db.extract_files()
+    log.logger.info('解决乱码')
+    db.an_garcode('E:\dowloadftp')
+    db.remove_empty()
 
     #生成sql文件
-    # FileFind.findfilefinal(FileFind.BSALLfiles(1),1)
-    # FileFind.findfilefinal(FileFind.BSALLfiles(2),2)
-    #
-    # db.newlogpath()
+    FileFind.findfilefinal(FileFind.BSALLfiles(1),1)
+    FileFind.findfilefinal(FileFind.BSALLfiles(2),2)
 
-    # ''' 升级数据库bat'''
-    # runbat = UpdateDb()
-    # runbat.newsql('E:\dowloadftp\installbsjj.sql','@E:\dowloadftp','@.')
-    # runbat.newsql('E:\dowloadftp\installbsxt.sql','@E:\dowloadftp','@.')
-    # runbat.newbatrun()
-    # log.logger.info('数据库升级完毕')
+    FileFind.findCSfilefinal(FileFind.CSALLfiles(1),1)
+    FileFind.findCSfilefinal(FileFind.CSALLfiles(2),2)
 
 
+
+    db.newlogpath()
 
     db.copy_file()
+
+    ''' 升级数据库bat'''
+    runbat = UpdateDb()
+    runbat.newsql('E:\dowloadftp\installbsjj.sql','@E:\dowloadftp','@.')
+    runbat.newsql('E:\dowloadftp\installbsxt.sql','@E:\dowloadftp','@.')
+    runbat.newbatrun()
+    log.logger.info('数据库升级完毕')
+
+
+
+
 
 
 
